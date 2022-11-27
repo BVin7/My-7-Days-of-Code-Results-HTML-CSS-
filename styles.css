@@ -1,18 +1,19 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    border: 0;
-}
-
 :root {
     /*cores*/
     --branco: #FFFFFF;
     --cinza: #667085;
     --vermelho: #8E2424;
-    --logo-fonte: #3A404E;
+    --logo-titulo: #3A404E;
+    --titulos-principais: #101828;
 
     /*fontes*/
     --fonte-principal: 'Inter', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    border: 0;
 }
 
 body {
@@ -43,7 +44,7 @@ body {
     font-size: 1.125rem;
     font-weight: 500;
 
-    color: var(--logo-fonte);
+    color: var(--logo-titulo);
 }
 
 .cabecalho__navegacao {
@@ -82,4 +83,120 @@ body {
     border: 1px solid var(--vermelho);
 
     color: var(--branco);
+}
+
+.sobre {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 1.5rem;
+
+    text-align: center;
+
+    padding: 6rem 0;
+}
+
+.sobre > span {
+    color: var(--vermelho);
+
+    font-weight: 600;
+}
+
+.sobre__titulo {
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: 3.75rem;
+
+    color: var(--titulos-principais);
+}
+
+.sobre__texto {
+    color: var(--cinza);
+
+    font-size: 1.25rem;
+    line-height: 1.875rem;
+
+    width: 55%;
+}
+
+.metricas {
+    display: flex;
+    justify-content: space-evenly;
+
+    padding: 0 4rem 6rem 4rem;
+}
+
+.metrica__numero {
+    color: var(--vermelho);
+
+    font-size: 3.75rem;
+    font-weight: 600;
+    line-height: 4.5rem;
+}
+
+.metrica__titulo {
+    font-size: 1.125rem;
+    font-weight: 500;
+    line-height: 1.75rem;
+}
+
+.metrica__texto {
+    color: var(--cinza);
+
+    width: fit-content;
+}
+
+.metricas__projetos, 
+.metricas__colaboradores, 
+.metricas__downloads, 
+.metricas__review {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    width: 17.5rem;
+}
+
+.vagas {
+    padding: 6rem 0 6rem 0;
+}
+
+.vagas__talentos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.vagas__talentos span {
+    background: rgba(142, 36, 36, 0.05);
+
+    color: var(--vermelho);
+
+    border-radius: 1rem;
+
+    padding: 0.25rem 0.75rem;
+
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 1.25rem;
+}
+
+.vagas__titulo {
+    font-size: 2.25rem;
+    font-weight: 600;
+    line-height: 2.75rem;
+
+    color: var(--titulos-principais);
+}
+
+.vagas__texto {
+    font-size: 1.25rem;
+    line-height: 1.875rem;
+
+    color: var(--cinza);
+}
+
+.vagas__imagem {
+    margin-top: 2rem;
 }
