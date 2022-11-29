@@ -1,7 +1,9 @@
 :root {
     /*cores*/
     --branco: #FFFFFF;
+    --preto: #000000;
     --cinza: #667085;
+    --cinza-bordas: #EAECF0;
     --vermelho: #8E2424;
     --logo-titulo: #3A404E;
     --titulos-principais: #101828;
@@ -61,10 +63,12 @@ body {
     text-decoration: none;
 }
 
+.navegacao__links:hover {
+    color: var(--vermelho);
+}
+
 .cabecalho__botao {
     background: unset;
-
-    border-radius: 0.5rem;
 
     padding: 0.625rem 1.125rem;
 
@@ -75,14 +79,35 @@ body {
 
 .botao-entrar {
     color: var(--cinza);
+
+    transition: 0.5s;
+}
+
+.botao-entrar:hover {
+    border-bottom: 0.0625rem solid var(--vermelho);
+
+    color: var(--preto);
+
+    cursor: pointer;
 }
 
 .botao-cadastrar {
     background-color: var(--vermelho);
 
-    border: 1px solid var(--vermelho);
+    border: 0.0625rem solid var(--vermelho);
+    border-radius: 0.5rem;
 
     color: var(--branco);
+
+    transition: 0.5s;
+}
+
+.botao-cadastrar:hover {
+    background-color: var(--branco);
+
+    color: var(--cinza);
+
+    cursor: pointer;
 }
 
 .sobre {
@@ -182,7 +207,7 @@ body {
     line-height: 1.25rem;
 }
 
-.vagas__titulo {
+.talentos__titulo {
     font-size: 2.25rem;
     font-weight: 600;
     line-height: 2.75rem;
@@ -190,13 +215,65 @@ body {
     color: var(--titulos-principais);
 }
 
-.vagas__texto {
+.talentos__texto {
     font-size: 1.25rem;
     line-height: 1.875rem;
 
     color: var(--cinza);
 }
 
-.vagas__imagem {
+.talentos__imagem {
+    margin-top: 2rem;
+}
+
+.vagas__area-de-atuacao {
+    display: flex;
+    flex-direction: column;
+
+    width: 50%;
+
+    margin: 4rem auto 0 auto;
+}
+
+.area-de-atuacao__titulo {
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 1.875rem;
+
+    color: var(--titulos-principais);
+
+    margin-bottom: 2rem;
+}
+
+.area-de-atuacao__vaga {
+    border: 0.0625rem solid var(--cinza-bordas);
+    border-radius: 1rem;
+
+    padding: 1.5rem 1.5rem 1.75rem 1.5rem;
+
+    margin-bottom: 1.5rem;
+}
+
+.vaga__titulo {
+    font-size: 1.125rem;
+    font-weight: 500;
+    line-height: 1.75rem;
+
+    color: var(--titulos-principais);
+}
+
+.vaga__informacoes {
+    font-weight: 500;
+    
+    color: var(--cinza);
+
+    margin-top: 2rem;
+}
+
+.vaga__informacoes > span {
+    margin-right: 1rem;
+}
+
+.area-desenvolvimento {
     margin-top: 2rem;
 }
