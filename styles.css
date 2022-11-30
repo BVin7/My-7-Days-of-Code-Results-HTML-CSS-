@@ -1,12 +1,13 @@
 :root {
     /*cores*/
     --branco: #FFFFFF;
-    --preto: #000000;
     --cinza: #667085;
     --cinza-bordas: #EAECF0;
     --vermelho: #8E2424;
     --logo-titulo: #3A404E;
-    --titulos-principais: #101828;
+    --titulos: #101828;
+    --vagas-abertas: rgba(142, 36, 36, 0.05);
+    --secao-depoimentos: rgba(196, 25, 25, 0.03);
 
     /*fontes*/
     --fonte-principal: 'Inter', sans-serif;
@@ -25,6 +26,8 @@ body {
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5rem;
+
+    color: var(--titulos);
 }
 
 .cabecalho {
@@ -77,21 +80,21 @@ body {
     text-align: center;
 }
 
-.botao-entrar {
+#botao-entrar {
     color: var(--cinza);
 
     transition: 0.5s;
 }
 
-.botao-entrar:hover {
+#botao-entrar:hover {
     border-bottom: 0.0625rem solid var(--vermelho);
 
-    color: var(--preto);
+    color: var(--titulos);
 
     cursor: pointer;
 }
 
-.botao-cadastrar {
+#botao-cadastrar {
     background-color: var(--vermelho);
 
     border: 0.0625rem solid var(--vermelho);
@@ -102,7 +105,7 @@ body {
     transition: 0.5s;
 }
 
-.botao-cadastrar:hover {
+#botao-cadastrar:hover {
     background-color: var(--branco);
 
     color: var(--cinza);
@@ -131,8 +134,6 @@ body {
     font-size: 3rem;
     font-weight: 600;
     line-height: 3.75rem;
-
-    color: var(--titulos-principais);
 }
 
 .sobre__texto {
@@ -194,7 +195,7 @@ body {
 }
 
 .vagas__talentos span {
-    background: rgba(142, 36, 36, 0.05);
+    background: var(--vagas-abertas);
 
     color: var(--vermelho);
 
@@ -211,8 +212,6 @@ body {
     font-size: 2.25rem;
     font-weight: 600;
     line-height: 2.75rem;
-
-    color: var(--titulos-principais);
 }
 
 .talentos__texto {
@@ -240,8 +239,6 @@ body {
     font-weight: 500;
     line-height: 1.875rem;
 
-    color: var(--titulos-principais);
-
     margin-bottom: 2rem;
 }
 
@@ -258,8 +255,6 @@ body {
     font-size: 1.125rem;
     font-weight: 500;
     line-height: 1.75rem;
-
-    color: var(--titulos-principais);
 }
 
 .vaga__informacoes {
@@ -276,4 +271,55 @@ body {
 
 .area-desenvolvimento {
     margin-top: 2rem;
+}
+
+.depoimentos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background: var(--secao-depoimentos);
+
+    width: 85%;
+
+    margin: 0 auto;
+
+    padding: 4rem 0;
+}
+
+.depoimentos__texto {
+    font-size: 0.875rem;
+    font-weight: 600;
+    line-height: 1.25rem;
+
+    color: var(--vermelho);
+}
+
+.depoimentos__titulo {
+    font-size: 2.25rem;
+    font-weight: 500;
+    line-height: 2.75rem;
+
+    text-align: center;
+
+    margin: 1rem 0 2rem 0;
+
+    width: 90%;
+}
+
+.depoimentos__perfil-foto {
+    width: 4.5%;
+
+    margin-bottom: 1rem;
+}
+
+.depoimentos__perfil-nome {
+    font-weight: 500;
+}
+
+.depoimentos__perfil-cargo {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+
+    color: var(--cinza);
 }
