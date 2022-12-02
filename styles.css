@@ -1,13 +1,17 @@
 :root {
     /*cores*/
     --branco: #FFFFFF;
+    --branco-bordas: #D0D5DD;
     --cinza: #667085;
     --cinza-bordas: #EAECF0;
     --vermelho: #8E2424;
     --logo-titulo: #3A404E;
     --titulos: #101828;
+    --rodape: #F9FAFB;
+    --rodape-direitos: #98A2B3;
     --vagas-abertas: rgba(142, 36, 36, 0.05);
     --secao-depoimentos: rgba(196, 25, 25, 0.03);
+    --sombra-email: rgba(16, 24, 40, 0.05);
 
     /*fontes*/
     --fonte-principal: 'Inter', sans-serif;
@@ -184,7 +188,7 @@ body {
 }
 
 .vagas {
-    padding: 6rem 0 6rem 0;
+    padding: 6rem 0 5rem 0;
 }
 
 .vagas__talentos {
@@ -222,7 +226,7 @@ body {
 }
 
 .talentos__imagem {
-    margin-top: 2rem;
+    margin-top: 2.5rem;
 }
 
 .vagas__area-de-atuacao {
@@ -285,6 +289,8 @@ body {
     margin: 0 auto;
 
     padding: 4rem 0;
+
+    border-radius: 1rem;
 }
 
 .depoimentos__texto {
@@ -322,4 +328,85 @@ body {
     line-height: 1.25rem;
 
     color: var(--cinza);
+}
+
+.rodape {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+
+    background: var(--rodape);
+
+    margin-top: 6rem;
+
+    padding: 6rem 0;
+}
+
+.rodape__titulo {
+    font-size: 2.25rem;
+    font-weight: 600;
+    line-height: 2.75rem;
+}
+
+.rodape__texto {
+    color: var(--cinza);
+
+    font-size: 1.25rem;
+    line-height: 1.875rem;
+}
+
+.rodape__formulario {
+    display: flex;
+    justify-content: space-around;
+
+    margin: 1rem 0;
+
+    width: 30.75rem;
+}
+
+.rodape__email {
+    padding: 0.75rem 0.875rem 0.75rem 1rem;
+
+    border: 0.0625rem solid var(--branco-bordas);
+    border-radius: 0.5rem;
+
+    box-shadow: 0rem 0.0625rem 0.125rem var(--sombra-email);
+
+    width: 22.5rem;
+}
+
+.rodape__email::placeholder {
+    color: var(--cinza);
+
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5rem;
+}
+
+.rodape__botao {
+    padding: 0.75rem 1.25rem;
+
+    border: 0.0625rem solid var(--vermelho);
+    border-radius: 0.5rem;
+
+    background: var(--vermelho);
+
+    color: var(--branco);
+
+    font-weight: 500;
+
+    transition: 0.5s;
+}
+
+.rodape__botao:hover {
+    background-color: var(--branco);
+
+    color: var(--cinza);
+
+    cursor: pointer;
+}
+
+.rodape__direitos {
+    color: var(--rodape-direitos);
 }
